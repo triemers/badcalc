@@ -82,7 +82,15 @@ html {
     overflow: hidden;
   }
   
-  .calculator__display {
+  .calculator__display{
+    background-color: yellowgreen;
+    color: hotpink;
+    font-size: 1.7em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+  }
+/*doesn't stay put*/
+  h1 {
     background-color: yellowgreen;
     color: hotpink;
     font-size: 1.7em;
