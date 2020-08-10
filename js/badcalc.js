@@ -1,5 +1,5 @@
-const decimal = document.getElementsByClassName('decimal');
-const clear = document.getElementsByClassName('clear');
+const decimal = document.getElementById('decimal');
+const clear = document.getElementById('clear');
 const displayValElement = document.getElementById("calculator__display");
 const btnNumbers = document.getElementsByClassName('btn-number');
 const btnOperators = document.getElementsByClassName('key--operator');
@@ -71,7 +71,7 @@ for (let i =0; i < btnOperators.length; i++) {
   btnOperators[i].addEventListener('click', performOperation)
 };
 
-// On clicking the clear button, all values and the display are being reset DOESNT WORK
+// On clicking the clear button, all values and the display are being reset WORKS
 clear.onclick = () => {
   displayVal = '0';
   pendingVal = undefined;
@@ -80,7 +80,7 @@ clear.onclick = () => {
 };
 
 // Not allowing two decimal points in input DOESN'T WORK
-decimal.onclick = () => { 
+btnNumbers.onclick = () => { 
   if(!displayVal.includes('.')) {
       displayVal += '.';
   }
