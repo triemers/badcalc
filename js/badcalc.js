@@ -80,7 +80,7 @@ clear.onclick = () => {
 };
 
 // Not allowing two decimal points in input DOESN'T WORK
-btnNumbers.onclick = () => { 
+decimal.onclick = () => { 
   if(!displayVal.includes('.')) {
       displayVal += '.';
   }
