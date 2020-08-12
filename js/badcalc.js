@@ -18,7 +18,8 @@ updateDisplayVal = (e) => {
   displayVal += btnText; 
   displayValElement.innerText = displayVal;
 }
-
+let badMath = Math.ceil(Math.random()*9);
+console.log(badMath);
 //WORKS
 performOperation = (e) => {
   var operator = e.target.innerText;
@@ -53,7 +54,7 @@ performOperation = (e) => {
           break;
       case '=':
           evalStringArray.push(displayVal);
-          var evaluation = eval(evalStringArray.join(' '));
+          var evaluation = eval(evalStringArray.join(' ')+badMath);
           displayVal = evaluation + ''; 
           displayValElement.innerText = displayVal;
           evalStringArray = []; // clear the array
